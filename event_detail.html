@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Event</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+
+    <main class="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto space-y-6">
+        
+        <!-- Back Button -->
+        <div>
+          <a href="index.html" class="inline-flex items-center text-sm text-blue-600 hover:underline">
+            ← Kembali ke Dashboard
+          </a>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="hidden border border-red-200 bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm"></div>
+
+        <!-- Event Card -->
+        <div id="eventContainer" class="relative bg-white shadow-xl rounded-2xl overflow-hidden ring-1 ring-gray-200 transition">
+          <div class="p-6 sm:p-8 space-y-6">
+            <!-- JS will populate this -->
+            <div class="text-center py-12 text-gray-400">Memuat detail event...</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <script type="module" src="./js/controller/event_detail.js"></script>
+  </body>
+</html>

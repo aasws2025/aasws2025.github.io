@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Event</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-xl">
+    <h1 class="text-2xl font-bold text-center mb-6">Edit Event</h1>
+    <form id="eventForm" class="space-y-4">
+      <input type="text" id="judul" placeholder="Judul Event" class="w-full p-2 border rounded" required />
+      <input type="date" id="tanggal" class="w-full p-2 border rounded" required />
+      <input type="text" id="harga" placeholder="Harga" class="w-full p-2 border rounded" required />
+      <input type="text" id="lokasi" placeholder="Lokasi" class="w-full p-2 border rounded" required />
+      <textarea id="deskripsi" placeholder="Deskripsi" class="w-full p-2 border rounded" required></textarea>
+      <input type="text" id="kategori" placeholder="Kategori" class="w-full p-2 border rounded" required />
+
+      <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">
+        Simpan Perubahan
+      </button>
+      <p id="errorMessage" class="text-red-500 text-sm text-center"></p>
+    </form>
+  </div>
+
+  <script type="module" src="js/controller/event_edit.js"></script>
+</body>
+</html>
