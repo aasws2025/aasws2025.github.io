@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Event</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tambahkan jsPDF dan AutoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
   <!-- Navbar -->
-  <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-gray-800">Dashboard Event</h1>
-    <div class="flex justify-end gap-2 mb-4">
+  <header class="bg-white shadow-md px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+    <h1 class="text-xl sm:text-2xl font-bold text-gray-800">Dashboard Event</h1>
+    <div class="flex flex-col sm:flex-row gap-2">
       <a href="event_form.html" id="createBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">+ Buat Event</a>
+      <button id="exportBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Export PDF</button>
       <a href="/login.html" id="loginBtn" class="bg-gray-100 text-gray-700 px-4 py-2 rounded hover:bg-gray-200 transition hidden">Login</a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="flex-grow container mx-auto p-6">
-    <div id="eventList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <main class="flex-grow container mx-auto px-4 sm:px-6 py-6">
+    <div id="eventList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     <p id="errorMessage" class="text-red-500 mt-4 text-center"></p>
   </main>
 
