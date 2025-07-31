@@ -35,7 +35,7 @@ form.addEventListener('submit', async function (e) {
       document.cookie = `token=${result.token}; path=/; max-age=86400`;
 
       alert("Login berhasil!");
-      // window.location.href = "dashboard.html"; // Uncomment if you want redirection
+      window.location.href = "/";
     }
   } catch (err) {
     errorEl.textContent = "Gagal menghubungi server.";

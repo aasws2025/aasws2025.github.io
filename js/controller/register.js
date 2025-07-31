@@ -38,6 +38,7 @@ form.addEventListener('submit', async function (e) {
     } else {
       alert("Pendaftaran berhasil!");
       form.reset();
+      window.location.href = "/login.html";
     }
   } catch (err) {
     errorEl.textContent = "Gagal menghubungi server.";
