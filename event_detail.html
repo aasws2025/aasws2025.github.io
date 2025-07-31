@@ -4,32 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Event</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-gray-100 text-gray-800">
+  <body class="bg-[#f9fafb] text-gray-800">
 
-    <main class="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto space-y-6">
-        
-        <!-- Back Button -->
-        <div>
-          <a href="index.html" class="inline-flex items-center text-sm text-blue-600 hover:underline">
-            ← Kembali ke Dashboard
-          </a>
-        </div>
-
-        <!-- Error Message -->
-        <div id="errorMessage" class="hidden border border-red-200 bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm"></div>
-
-        <!-- Event Card -->
-        <div id="eventContainer" class="relative bg-white shadow-xl rounded-2xl overflow-hidden ring-1 ring-gray-200 transition">
-          <div class="p-6 sm:p-8 space-y-6">
-            <!-- JS will populate this -->
-            <div class="text-center py-12 text-gray-400">Memuat detail event...</div>
-          </div>
-        </div>
-
+    <header class="bg-white shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-sm text-blue-600 hover:underline">&larr; Kembali ke Dashboard</a>
+        <h1 class="text-lg font-semibold text-gray-900">Detail Event</h1>
+        <div></div>
       </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-10 space-y-8">
+      <!-- Error -->
+      <div id="errorMessage" class="hidden border border-red-300 bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm shadow-sm"></div>
+
+      <!-- Event Card -->
+      <section id="eventContainer" class="bg-white shadow-md rounded-xl p-8 space-y-6">
+        <div class="text-center text-gray-400 text-sm">Memuat detail event...</div>
+      </section>
     </main>
 
     <script type="module" src="./js/controller/event_detail.js"></script>
